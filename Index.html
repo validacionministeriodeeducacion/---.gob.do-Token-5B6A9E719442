@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Certificados - MINERD</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-[#222222] flex flex-col justify-between">
+
+    <div>
+        <header class="w-full bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 py-1 flex flex-col md:flex-row justify-between items-center gap-6">
+                
+                <div id="logoContainer" class="flex items-center ml-6 md:ml-16">
+                    <img src="logo.png" alt="Gobierno de la República Dominicana - Educación" class="h-36 w-auto object-contain">
+                </div>
+
+                <div class="flex flex-col items-start gap-1 w-64 mr-0 md:mr-16 lg:mr-24">
+                    
+                    <div class="flex items-center gap-1.5 text-[11px] font-normal text-[#222222] tracking-wide mb-1">
+                        <img src="escudo.png" alt="Escudo República Dominicana" class="h-4 w-auto object-contain inline-block"> 
+                        <span class="italic font-normal text-[#333333]">REPÚBLICA DOMINICANA</span>
+                    </div>
+
+                    <div class="border border-[#cccccc] bg-white p-2 w-full shadow-xs flex flex-col gap-2">
+                        
+                        <div class="flex items-center border border-[#cccccc] bg-white">
+                            <input type="text" placeholder="¿Qué estás buscando?" class="px-2.5 py-1 text-xs text-[#555555] placeholder:text-[#888888] focus:outline-none w-full bg-transparent">
+                            <button type="button" onclick="return false;" class="bg-white px-2.5 py-1 cursor-pointer border-l border-[#cccccc] flex items-center justify-center shrink-0 hover:bg-slate-50">
+                                <img src="lupa.png" alt="Buscar" class="h-3.5 w-3.5 object-contain">
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between text-[10px] text-[#444444] pt-1 border-t border-[#e5e5e5] px-0.5">
+                            <a href="#" onclick="return false;" class="hover:underline">INICIO</a>
+                            <span class="text-[#cccccc]">|</span>
+                            <a href="#" onclick="return false;" class="hover:underline">MAPA DEL SITIO</a>
+                            <span class="text-[#cccccc]">|</span>
+                            <a href="#" onclick="return false;" class="hover:underline">CONTACTOS</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <nav class="border-t border-slate-200 bg-white shadow-xs">
+                <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center gap-7 text-[11px] font-medium text-slate-700 pl-8 md:pl-20">
+                    
+                    <a href="#" onclick="return false;" class="relative py-2.5 tracking-wide text-slate-700 hover:text-slate-900 group">
+                        INICIO
+                        <span class="absolute top-0 left-0 w-full h-[3px] bg-[#0099ff] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-[1px] bg-slate-900 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    </a>
+
+                    <a href="#" onclick="return false;" class="relative py-2.5 tracking-wide flex items-center gap-1 text-slate-700 hover:text-slate-900 group">
+                        SOBRE NOSOTROS ▾
+                        <span class="absolute top-0 left-0 w-full h-[3px] bg-[#0099ff] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-[1px] bg-slate-900 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    </a>
+
+                    <a href="#" onclick="return false;" class="relative py-2.5 tracking-wide text-slate-700 hover:text-slate-900 group">
+                        SERVICIOS
+                        <span class="absolute top-0 left-0 w-full h-[3px] bg-[#0099ff] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-[1px] bg-slate-900 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    </a>
+
+                    <a href="#" onclick="return false;" class="relative py-2.5 tracking-wide text-slate-700 hover:text-slate-900 group">
+                        TRANSPARENCIA
+                        <span class="absolute top-0 left-0 w-full h-[3px] bg-[#0099ff] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-[1px] bg-slate-900 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    </a>
+
+                    <a href="#" onclick="return false;" class="relative py-2.5 tracking-wide text-slate-700 hover:text-slate-900 group">
+                        NOTICIAS
+                        <span class="absolute top-0 left-0 w-full h-[3px] bg-[#0099ff] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-[1px] bg-slate-900 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    </a>
+
+                    <a href="#" onclick="return false;" class="relative py-2.5 tracking-wide text-slate-700 hover:text-slate-900 group">
+                        CONTACTOS
+                        <span class="absolute top-0 left-0 w-full h-[3px] bg-[#0099ff] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-[1px] bg-slate-900 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    </a>
+
+                </div>
+            </nav>
+        </header>
+
+        <main class="max-w-6xl mx-auto my-3 px-4">
+            <div class="border border-[#0099ff] shadow-sm overflow-hidden bg-white">
+                
+                <div class="bg-[#18212d] text-white py-4 px-6 text-center">
+                    <h1 class="text-xl font-normal tracking-wide">Consulta de Certificados</h1>
+                </div>
+
+                <div class="border-t border-[#0099ff] p-3 sm:p-4">
+                    
+                    <div class="flex flex-wrap items-center gap-4 mb-6">
+                        <div class="flex items-center gap-3">
+                            <label for="tokenInput" class="font-bold text-slate-800 text-lg">Código:</label>
+                            <input type="text" id="tokenInput" placeholder="Token del reporte" 
+                                class="w-64 px-3 py-2 bg-white border border-slate-300 rounded text-sm placeholder:text-slate-400 focus:outline-none">
+                        </div>
+                        <button type="button" onclick="return false;"
+                            class="bg-[#18212d] hover:bg-slate-800 text-white font-medium px-6 py-2 rounded text-sm tracking-wide cursor-pointer transition-colors">
+                            BUSCAR
+                        </button>
+                    </div>
+
+                    <div class="mb-6">
+                        <button type="button" onclick="return false;"
+                            class="bg-[#18212d] hover:bg-slate-800 text-white font-medium px-4 py-2 rounded text-sm tracking-wide cursor-pointer transition-colors">
+                            GENERAR PDF
+                        </button>
+                    </div>
+
+
+                    <div id="resultadoSeccion">
+                        <h2 class="text-3xl font-normal text-slate-900 mb-4 ml-0 pl-0">Certificado Nivel Medio</h2>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="text-slate-900 border-b border-[#7b9eb0]/55">
+                                        <th class="py-2.5 pl-0 pr-2 font-bold w-[22%] text-sm">Parámetro</th>
+                                        <th class="py-2.5 pl-0 pr-2 font-bold w-[78%] text-sm">Valor</th>
+                                    </tr>
+                                </thead>
+                               
+                                <tbody class="text-sm">
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Nombre Completo</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">ANLLELINA TEJEDA CASTILLO</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">IdEstudiante</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">42615274</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">RNE</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">ATC9008090001</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Nombre del Centro</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">CAPOTILLO BASICO </td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Código del Centro</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">16273621</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Sección</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">A</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Código Distrito</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">1502</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Nombre Distrito</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">DISTRITO SANTO DOMINGO CENTRO </td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Código Regional</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">15</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Nombre Regional</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">SANTO DOMINGO</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Modalidad</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">MODALIDAD GENERAL</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Especialidad</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">MODALIDAD GENERAL</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Año Escolar</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">2003 - 2004</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Convocatoria</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">1</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Fecha de Registro</td>
+                                        <!-- Se añadió el id "fechaRegistro" aquí -->
+                                        <td id="fechaRegistro" class="py-2 pl-0 pr-2 font-normal text-slate-900">7/16/2026 5:31:06 PM</td>
+                                    </tr>
+                                    <tr class="border-b border-[#7b9eb0]/55">
+                                        <td class="py-2 pl-0 pr-2 font-bold text-slate-900">Estado</td>
+                                        <td class="py-2 pl-0 pr-2 font-normal text-slate-900">APROBÓ EL PLAN DE ESTUDIO Y LAS PRUEBAS NACIONALES EN CONCLUSIÓN</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="w-full mt-2 bg-[#18212d] flex justify-center items-center py-4">
+        <img src="01.jpg" alt="Footer Banner" class="max-w-lg sm:max-w-xl md:max-w-3xl w-auto h-auto block object-contain">
+    </footer>
+
+    <!-- Script para actualizar la fecha dinámicamente -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const ahora = new Date();
+            
+            // Opciones para darle un formato claro de fecha y hora local
+            const opciones = { 
+                year: 'numeric', 
+                month: 'numeric', 
+                day: 'numeric', 
+                hour: 'numeric', 
+                minute: '2-digit', 
+                second: '2-digit', 
+                hour12: true 
+            };
+
+            // Genera la fecha formateada en español (ej: 9/17/2026, 2:31:53 AM o similar)
+            const fechaFormateada = ahora.toLocaleString('en-US', opciones);
+
+            // Inserta la fecha actual en la celda correspondiente
+            const celdaFecha = document.getElementById('fechaRegistro');
+            if (celdaFecha) {
+                celdaFecha.textContent = fechaFormateada;
+            }
+        });
+    </script>
+</body>
+</html>
